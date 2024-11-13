@@ -1,0 +1,65 @@
+$FONT_S: 16px;
+$FONT_M: 20px;
+
+$MONTSERRAT_LIGHT: 'Montserrat Light';
+$MONTSERRAT: 'Montserrat';
+$MONTSERRAT_MEDIUM: 'Montserrat Medium';
+$MONTSERRAT_BOLD: 'Montserrat Bold';
+
+$LINE_HEIGHT: 1.5;
+
+@mixin font-montserrat-s-light() {
+    font-family: $MONTSERRAT_LIGHT;
+    font-size: $FONT_S;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-m-light() {
+    font-family: $MONTSERRAT_LIGHT;
+    font-size: $FONT_M;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-s() {
+    font-family: $MONTSERRAT;
+    font-size: $FONT_S;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-m() {
+    font-family: $MONTSERRAT;
+    font-size: $FONT_M;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-s-medium() {
+    font-family: $MONTSERRAT_MEDIUM;
+    font-size: $FONT_S;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-m-medium() {
+    font-family: $MONTSERRAT_MEDIUM;
+    font-size: $FONT_M;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-s-bold() {
+    font-family: $MONTSERRAT_BOLD;
+    font-size: $FONT_S;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
+
+@mixin font-montserrat-m-bold() {
+    font-family: $MONTSERRAT_BOLD;
+    font-size: $FONT_M;
+    line-height: $LINE_HEIGHT;
+    font-style: normal;
+}
