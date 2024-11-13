@@ -1,0 +1,32 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.SButton {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: variables.$RADIUS-S;
+    transition: variables.$TRANSITION-UI;
+
+    @include mixins.font-montserrat-m-medium();
+
+    &_primary {
+        background-color: variables.$PRIMARY_BUTTON_BGC;
+        color: variables.$PRIMARY_BUTTON_TEXT;
+
+        &:hover {
+            background-color: variables.$PRIMARY_BUTTON_BGC_HOVER;
+        }
+
+        &:active {
+            background-color: variables.$PRIMARY_BUTTON_BGC_FOCUS;
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: variables.$PRIMARY_BUTTON_BGC_DISABLED;
+        color: variables.$PRIMARY_BUTTON_TEXT;
+    }
+}

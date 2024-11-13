@@ -5,21 +5,29 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["node"],
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
+    "declaration": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*"
+  ],
+  "outDir": "dist",
+  "exclude": [
+    "node_modules",
+    "./src/**/*.stories.tsx"
+  ]
 }

@@ -1,0 +1,19 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.SLink {
+    transition: variables.$TRANSITION-UI;
+
+    color: variables.$LINK_TEXT;
+    text-decoration: none;
+    
+    @include mixins.font-montserrat-s-medium();
+
+    &:hover {
+        color: variables.$LINK_TEXT_HOVER;
+    }
+
+    &:focus {
+        color: variables.$LINK_TEXT_FOCUS;
+    }
+}

@@ -1,0 +1,76 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.SSelect { 
+    height: 44px !important;
+    width: 100% !important;
+    @include mixins.font-montserrat-s-medium();
+
+    .ant-select-selector {
+        padding: 0 10px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: 44px !important;
+    
+        outline: none !important;
+        box-shadow: none !important;
+    
+        background-color: variables.$INPUT_BGC !important;
+        border: 2px solid variables.$INPUT_BORDER !important;
+        border-radius: variables.$RADIUS-S !important;
+        transition: variables.$TRANSITION-UI !important;
+    
+        color: variables.$INPUT_TEXT !important;
+        @include mixins.font-montserrat-s();
+    
+        &:hover {
+            border-color: variables.$INPUT_BORDER_HOVER !important;
+            box-shadow: none !important;
+        }
+    
+        &-focused {
+            border-color: variables.$INPUT_BORDER_FOCUS !important;
+            box-shadow: none !important;
+        }
+    
+        &::placeholder {
+            color: variables.$INPUT_PLACEHOLDER !important;
+        }
+    }
+
+    .ant-select-focused {
+        border-color: variables.$INPUT_BORDER_FOCUS !important;
+        outline: variables.$INPUT_BORDER_FOCUS !important;    
+    }
+    .ant-select-outlined {
+        border-color: variables.$INPUT_BORDER_FOCUS !important;
+        outline: variables.$INPUT_BORDER_FOCUS !important;    
+    }
+}
+
+.ant-select-dropdown {
+    padding: 0 !important;
+    max-height: 100px !important;
+
+    color: variables.$INPUT_TEXT !important;
+    outline: 2px solid;
+    border-radius: variables.$RADIUS-S !important;
+    outline-color: variables.$INPUT_BORDER_HOVER !important;
+
+    @include mixins.font-montserrat-s-medium();
+
+    overflow-y: auto;
+}
+
+.ant-select-item-option {
+    padding: 0 15px !important;
+    height: 48px !important;
+
+    display: flex;
+    align-items: center;
+}
+
+.ant-select-item-option-selected {
+    background-color: variables.$INPUT_BORDER_HOVER !important;
+    color: variables.$SELECT_OPTIONS_SELECTED_TEXT !important;
+}

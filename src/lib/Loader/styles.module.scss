@@ -1,0 +1,32 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.SIndicator {
+  animation: spin 1s linear infinite;
+
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.SOverlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: variables.$OVERLAY_BGC;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}

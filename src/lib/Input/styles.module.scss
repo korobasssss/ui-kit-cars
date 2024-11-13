@@ -1,0 +1,40 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.SInput {
+    padding: 0 10px;
+    margin: 0;
+    width: 100%;
+    height: 44px;
+
+    outline: none;
+
+    background-color: variables.$INPUT_BGC;
+    border: 2px solid variables.$INPUT_BORDER;
+    border-radius: variables.$RADIUS-S;
+    transition: variables.$TRANSITION-UI;
+
+    color: variables.$INPUT_TEXT;
+
+    @include mixins.font-montserrat-s();
+
+    &:hover {
+        border-color: variables.$INPUT_BORDER_HOVER;
+    }
+
+    &:focus {
+        border-color: variables.$INPUT_BORDER_FOCUS;
+    }
+
+    &::placeholder {
+        color: variables.$INPUT_PLACEHOLDER;
+    }
+
+    &_error {
+        border: variables.$INPUT_BORDER_HOVER;
+
+        &:hover, &:focus {
+            border: variables.$INPUT_BORDER_HOVER;
+        }
+    }
+}
