@@ -1,6 +1,12 @@
 @use '../../shared/styles/mixins' as mixins;
 @use '../../shared/styles/variables' as variables;
 
+.SInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .SInput {
     padding: 0 10px;
     margin: 0;
@@ -31,10 +37,14 @@
     }
 
     &_error {
-        border: variables.$INPUT_BORDER_HOVER;
+        border-color: variables.$INPUT_ERROR_BORDER;
 
-        &:hover, &:focus {
-            border: variables.$INPUT_BORDER_HOVER;
+        &:hover {
+            border-color: variables.$INPUT_ERROR_BORDER_HOVER;
+        }
+    
+        &:focus {
+            border-color: variables.$INPUT_ERROR_BORDER_FOCUS;
         }
     }
 }

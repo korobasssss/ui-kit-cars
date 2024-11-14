@@ -22,6 +22,13 @@ export const Primary: Story = {
   },
 };
 
+export const PrimaryDanger: Story = {
+  args: {
+    theme: 'danger',
+    children: 'Я опасная кнопка'
+  },
+};
+
 export const PrimaryDisabled: Story = {
   args: {
     theme: 'primary',

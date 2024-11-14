@@ -24,6 +24,19 @@
         }
     }
 
+    &_danger {
+        background-color: variables.$DANGER_BUTTON_BGC;
+        color: variables.$DANGER_BUTTON_TEXT;
+
+        &:hover {
+            background-color: variables.$DANGER_BUTTON_BGC_HOVER;
+        }
+
+        &:active {
+            background-color: variables.$DANGER_BUTTON_BGC_FOCUS;
+        }
+    }
+
     &:disabled {
         cursor: not-allowed;
         background-color: variables.$PRIMARY_BUTTON_BGC_DISABLED;

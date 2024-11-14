@@ -1,24 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Popup } from './';
+import { DrawerPopup } from '.';
 import { fn } from '@storybook/test';
 
 const meta = {
-  title: 'Popup',
-  component: Popup,
+  title: 'DrawerPopup',
+  component: DrawerPopup,
   tags: ['autodocs'],
   args: {
+
 },
-} satisfies Meta<typeof Popup>;
+} satisfies Meta<typeof DrawerPopup>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    title: 'Заголовок',
     children: 'Это внутренности попапа',
-    isModalOpen: true,
-    handleClose: fn()
+    title: 'Заголовок',
+    isOpen: true,
+    setIsOpen: fn()
   },
 };

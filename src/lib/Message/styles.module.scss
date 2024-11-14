@@ -1,0 +1,14 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.SMessage {
+    @include mixins.font-montserrat-s-medium;
+
+    &_base {
+        color: variables.$TEXT;
+    }
+
+    &_error {
+        color: variables.$TEXT_ERROR;
+    }
+}

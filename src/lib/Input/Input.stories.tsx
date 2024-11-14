@@ -20,3 +20,10 @@ export const Primary: Story = {
     placeholder: 'Введите текст'
   },
 };
+
+export const PrimaryError: Story = {
+  args: {
+    error: 'Введи правильно значение емае',
+    placeholder: 'Введите текст'
+  },
+};

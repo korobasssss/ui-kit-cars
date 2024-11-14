@@ -2,6 +2,7 @@ import { Modal } from "antd"
 import { FC, ReactNode, SetStateAction } from "react"
 
 export interface IPopup {
+    title: string
     children: ReactNode
     isModalOpen: boolean
     handleClose: React.Dispatch<SetStateAction<boolean>>
@@ -9,6 +10,7 @@ export interface IPopup {
 
 export const Popup: FC<IPopup> = (
 {
+    title,
     isModalOpen,
     children,
     handleClose
@@ -16,6 +18,7 @@ export const Popup: FC<IPopup> = (
 ) => {
     return (
         <Modal
+            title={title}
             open={isModalOpen}
             onCancel={() => handleClose(false)}
             footer={null}

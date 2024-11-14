@@ -38,3 +38,10 @@ DefaultMultiply.args = {
     placeholder: 'Это плейсхолдер',
     multiply: 'multiple'
 };
+
+export const DefaultMultiplyError = Template.bind({});
+DefaultMultiply.args = {
+    placeholder: 'Это плейсхолдер',
+    multiply: 'multiple',
+    error: 'Ошибка!'
+};

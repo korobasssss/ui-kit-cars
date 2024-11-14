@@ -1,6 +1,7 @@
 import { FC, InputHTMLAttributes } from "react"
 import cx from 'classnames'
 import styles from './styles.module.scss'
+import { Message } from "../Message"
 
 export interface IInput 
 extends InputHTMLAttributes<HTMLInputElement> {
@@ -19,18 +20,26 @@ export const Input: FC<IInput> = ({
 }) => {
 
     return (
-        <input
-            value={value}
-            className={cx(
-                classNames,
-                styles.SInput,
-                {
-                    [styles['SInput_error']] : error
-                }
+        <div className={styles.SInputWrapper}>
+            <input
+                value={value}
+                className={cx(
+                    classNames,
+                    styles.SInput,
+                    {
+                        [styles['SInput_error']] : error
+                    }
+                )}
+                placeholder={placeholder}
+                onChange={onChange}
+                {...restProps}
+            />
+            {error && (
+                <Message 
+                    type='error'
+                    message={error}
+                />
             )}
-            placeholder={placeholder}
-            onChange={onChange}
-            {...restProps}
-        />
+        </div>
     )
 }

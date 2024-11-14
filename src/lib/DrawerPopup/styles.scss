@@ -1,0 +1,8 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.ant-drawer-title {
+    text-align: center;
+
+    @include mixins.font-montserrat-m-bold;
+}
