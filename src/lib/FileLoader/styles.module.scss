@@ -1,0 +1,37 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+.SFileWrapper {
+    position: relative;
+    width: 100%;
+    height: 156px;
+    border: 2px dashed variables.$FILE_BORDER;
+    border-radius: variables.$RADIUS-S;
+
+    display: grid;
+    cursor: pointer;
+
+    .SFileTitle {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        color: variables.$LIGHT_GRAY;
+
+        @include mixins.font-montserrat-s-medium;
+    }
+}
+
+.SImageWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+
+    .SImage {
+        width: 340px;
+        height: 200px;
+    
+        object-fit: cover;
+    }
+}
+
