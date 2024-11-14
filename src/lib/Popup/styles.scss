@@ -1,3 +1,6 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
 .ant-modal-title {
     text-align: center;
 
