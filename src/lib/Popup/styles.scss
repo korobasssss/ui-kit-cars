@@ -1,0 +1,6 @@
+.ant-modal-title {
+    text-align: center;
+
+    @include mixins.font-montserrat-m-bold;
+    color: variables.$TEXT;
+}
