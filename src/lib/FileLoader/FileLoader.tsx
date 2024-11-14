@@ -2,14 +2,17 @@ import { FC, useState } from "react"
 import styles from './styles.module.scss'
 import { ButtonIcon } from "../ButtonIcon"
 import { DeleteIcon } from "../../shared/assets/icons"
+import { Message } from "../Message"
 
 export interface IFileLoader {
     handleChange: (file?: File) => void
+    error?: string
 }
 
 export const FileLoader: FC<IFileLoader> = (
     {
         handleChange,
+        error
     }
 ) => {
     const [currentImage, setCurrentImage] = useState<string | null>(null)
@@ -48,22 +51,30 @@ export const FileLoader: FC<IFileLoader> = (
     )
 
     return (
-        <div className={styles.SFileWrapper}>
-            <div className={styles.SFileTitle}>
-                Выберите фото или перетащите сюда
+        <>
+            <div className={styles.SFileWrapper}>
+                <div className={styles.SFileTitle}>
+                    Выберите фото или перетащите сюда
+                </div>
+                <input 
+                    type="file" 
+                    name="f"
+                    style={{
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        opacity: 0,
+                        cursor: 'pointer'
+                    }}
+                    onChange={handleImageChange}
+                />
             </div>
-            <input 
-                type="file" 
-                name="f"
-                style={{
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    opacity: 0,
-                    cursor: 'pointer'
-                  }}
-                onChange={handleImageChange}
-            />
-        </div>
+            {error && (
+                <Message 
+                    type='error'
+                    message={error}
+                />
+            )}
+        </>
     )
 }
