@@ -32,6 +32,7 @@ export const Input: FC<IInput> = ({
                 )}
                 placeholder={placeholder}
                 onChange={onChange}
+                type={type}
                 {...restProps}
             />
             {error && (
