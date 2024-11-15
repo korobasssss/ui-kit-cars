@@ -38,6 +38,26 @@
         }
     }
 
+    &_none {
+        position: relative;
+
+        background-color: transparent;
+        color: variables.$TEXT;
+
+        width: max-content;
+        height: max-content;
+
+        padding: 0;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            top: 3px;
+        }
+    }
+
     &:disabled {
         cursor: not-allowed;
         background-color: variables.$PRIMARY_BUTTON_BGC_DISABLED;

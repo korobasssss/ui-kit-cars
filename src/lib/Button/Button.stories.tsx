@@ -36,3 +36,10 @@ export const PrimaryDisabled: Story = {
     disabled: true
   },
 };
+
+export const PrimaryNone: Story = {
+  args: {
+    theme: 'none',
+    children: 'Я кнопка',
+  },
+};

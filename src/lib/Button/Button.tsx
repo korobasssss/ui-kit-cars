@@ -6,7 +6,7 @@ export interface IButton
 extends ButtonHTMLAttributes<HTMLButtonElement> {
     classNames?: string
     children: ReactNode
-    theme: 'primary' | 'danger'
+    theme: 'primary' | 'danger' | 'none'
 }
 
 export const MyButton: FC<IButton> = (
