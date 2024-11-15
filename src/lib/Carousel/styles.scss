@@ -1,0 +1,13 @@
+.SCarouselWrapper {
+    width: 100% !important;
+
+    img {
+        width: 100%;
+        height: calc(100vh - 72px - 50px) !important;
+        object-fit: cover;
+    }
+}
+
+.ant-carousel, .slick-track {
+    height: calc(100vh - 72px - 50px) !important;
+}
