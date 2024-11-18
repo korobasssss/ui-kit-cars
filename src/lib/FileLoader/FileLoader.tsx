@@ -67,6 +67,7 @@ export const FileLoader: FC<IFileLoader> = (
                         opacity: 0,
                         cursor: 'pointer'
                     }}
+                    accept="image/jpeg, image/png"
                     onChange={handleImageChange}
                 />
             </div>
