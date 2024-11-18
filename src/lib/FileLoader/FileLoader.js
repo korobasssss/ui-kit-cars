@@ -29,5 +29,5 @@ export const FileLoader = ({ handleChange, error }) => {
                             height: '100%',
                             opacity: 0,
                             cursor: 'pointer'
-                        }, onChange: handleImageChange })] }), error && (_jsx(Message, { type: 'error', message: error }))] }));
+                        }, accept: "image/jpeg, image/png", onChange: handleImageChange })] }), error && (_jsx(Message, { type: 'error', message: error }))] }));
 };
