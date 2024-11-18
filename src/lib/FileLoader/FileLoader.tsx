@@ -44,6 +44,7 @@ export const FileLoader: FC<IFileLoader> = (
             <ButtonIcon 
                 alt="delete"
                 onClick={handleDeleteImage}
+                type='button'
             >
                 <img src={DeleteIcon} alt='delete'/>
             </ButtonIcon>
