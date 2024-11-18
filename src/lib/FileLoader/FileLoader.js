@@ -22,7 +22,7 @@ export const FileLoader = ({ handleChange, error }) => {
         handleChange(undefined);
     };
     if (currentImage)
-        return (_jsxs("div", { className: styles.SImageWrapper, children: [_jsx("img", { src: currentImage, alt: "current image", className: styles.SImage }), _jsx(ButtonIcon, { alt: "delete", onClick: handleDeleteImage, children: _jsx("img", { src: DeleteIcon, alt: 'delete' }) })] }));
+        return (_jsxs("div", { className: styles.SImageWrapper, children: [_jsx("img", { src: currentImage, alt: "current image", className: styles.SImage }), _jsx(ButtonIcon, { alt: "delete", onClick: handleDeleteImage, type: 'button', children: _jsx("img", { src: DeleteIcon, alt: 'delete' }) })] }));
     return (_jsxs(_Fragment, { children: [_jsxs("div", { className: styles.SFileWrapper, children: [_jsx("div", { className: styles.SFileTitle, children: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u043E\u0442\u043E \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u0435 \u0441\u044E\u0434\u0430" }), _jsx("input", { type: "file", name: "f", style: {
                             position: 'absolute',
                             width: '100%',
