@@ -15,6 +15,7 @@ export const ButtonIcon: FC<IButtonIcon> = (
         classNames,
         children,
         alt,
+        type,
         onClick,
         disabled,
         ...restProps
@@ -27,6 +28,7 @@ export const ButtonIcon: FC<IButtonIcon> = (
                 styles.SButtonIcon
             )}
             onClick={onClick}
+            type={type}
             disabled={disabled}
             {...restProps}
         >
