@@ -46,7 +46,12 @@ export const MySelect = <T extends string | number, K extends string>({
             >
                 {options?.map((option) => {
                     return (
-                        <Select.Option value={option.value}>{option.label}</Select.Option>
+                        <Select.Option 
+                            value={option.value}
+                            key={option.value}
+                        >
+                            {option.label}
+                        </Select.Option>
                     )
                 })}
             </Select>
