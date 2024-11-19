@@ -1,0 +1,18 @@
+@use '../../shared/styles/mixins' as mixins;
+@use '../../shared/styles/variables' as variables;
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.SIndicator {
+  animation: spin 1s linear infinite;
+
+  width: 50px !important;
+  height: 50px !important;
+}
