@@ -26,7 +26,9 @@ export const Popup: FC<IPopup> = (
             zIndex={10}
             width={679}
         >
-            {children}    
+            {isModalOpen && (
+                children
+            )}
         </Modal>
     )
 }
