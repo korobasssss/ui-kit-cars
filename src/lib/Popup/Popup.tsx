@@ -25,10 +25,9 @@ export const Popup: FC<IPopup> = (
             footer={null}
             zIndex={10}
             width={679}
+            forceRender
         >
-            {isModalOpen && (
-                children
-            )}
+            {children}
         </Modal>
     )
 }
