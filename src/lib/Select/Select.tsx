@@ -18,6 +18,7 @@ export interface ISelect<T extends string | number, K extends string>{
     allowClear?: boolean
     showSearch?: boolean
     error?: string
+    errorTextShow?: boolean
 }
 
 export const MySelect = <T extends string | number, K extends string>({
@@ -29,7 +30,8 @@ export const MySelect = <T extends string | number, K extends string>({
     disabled,
     allowClear = true,
     showSearch = false,
-    error
+    error,
+    errorTextShow = false,
 }: ISelect<T, K>): JSX.Element => {
     return (
         <div>
@@ -55,7 +57,7 @@ export const MySelect = <T extends string | number, K extends string>({
                     )
                 })}
             </Select>
-            {error && (
+            {error && errorTextShow && (
                 <Message 
                     type='error'
                     message={error}

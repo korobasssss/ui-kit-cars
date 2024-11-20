@@ -7,12 +7,14 @@ import { Message } from "../Message"
 export interface IFileLoader {
     handleChange: (file?: File) => void
     error?: string
+    errorTextShow?: boolean
 }
 
 export const FileLoader: FC<IFileLoader> = (
     {
         handleChange,
-        error
+        error,
+        errorTextShow = false,
     }
 ) => {
     const [currentImage, setCurrentImage] = useState<string | null>(null)
@@ -71,7 +73,7 @@ export const FileLoader: FC<IFileLoader> = (
                     onChange={handleImageChange}
                 />
             </div>
-            {error && (
+            {error && errorTextShow && (
                 <Message 
                     type='error'
                     message={error}

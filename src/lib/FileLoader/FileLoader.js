@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import { ButtonIcon } from "../ButtonIcon";
 import { DeleteIcon } from "../../shared/assets/icons";
 import { Message } from "../Message";
-export const FileLoader = ({ handleChange, error }) => {
+export const FileLoader = ({ handleChange, error, errorTextShow = false, }) => {
     const [currentImage, setCurrentImage] = useState(null);
     const handleImageChange = (event) => {
         const file = event.target.files?.[0];
@@ -29,5 +29,5 @@ export const FileLoader = ({ handleChange, error }) => {
                             height: '100%',
                             opacity: 0,
                             cursor: 'pointer'
-                        }, accept: "image/jpeg, image/png", onChange: handleImageChange })] }), error && (_jsx(Message, { type: 'error', message: error }))] }));
+                        }, accept: "image/jpeg, image/png", onChange: handleImageChange })] }), error && errorTextShow && (_jsx(Message, { type: 'error', message: error }))] }));
 };

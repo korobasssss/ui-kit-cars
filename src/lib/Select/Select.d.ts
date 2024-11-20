@@ -13,5 +13,6 @@ export interface ISelect<T extends string | number, K extends string> {
     allowClear?: boolean;
     showSearch?: boolean;
     error?: string;
+    errorTextShow?: boolean;
 }
-export declare const MySelect: <T extends string | number, K extends string>({ value, options, onChange, placeholder, multiply, disabled, allowClear, showSearch, error }: ISelect<T, K>) => JSX.Element;
+export declare const MySelect: <T extends string | number, K extends string>({ value, options, onChange, placeholder, multiply, disabled, allowClear, showSearch, error, errorTextShow, }: ISelect<T, K>) => JSX.Element;

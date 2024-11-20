@@ -7,6 +7,7 @@ export interface IInput
 extends InputHTMLAttributes<HTMLInputElement> {
     classNames?: string
     error?: string
+    errorTextShow?: boolean
 }
 
 export const Input: FC<IInput> = ({
@@ -15,6 +16,7 @@ export const Input: FC<IInput> = ({
     placeholder,
     value,
     error,
+    errorTextShow = false,
     onChange,
     ...restProps
 }) => {
@@ -35,7 +37,7 @@ export const Input: FC<IInput> = ({
                 type={type}
                 {...restProps}
             />
-            {error && (
+            {error && errorTextShow && (
                 <Message 
                     type='error'
                     message={error}
