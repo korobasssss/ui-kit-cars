@@ -5,5 +5,6 @@ export interface IPopup {
     children: ReactNode;
     isModalOpen: boolean;
     handleClose: React.Dispatch<SetStateAction<boolean>>;
+    isForceRender?: boolean;
 }
 export declare const Popup: FC<IPopup>;
