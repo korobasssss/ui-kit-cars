@@ -1,3 +1,4 @@
+import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import { ISelect, Select } from './';
 import { useState } from 'react';
@@ -43,5 +44,5 @@ export const DefaultMultiplyError = Template.bind({});
 DefaultMultiply.args = {
     placeholder: 'Это плейсхолдер',
     multiply: 'multiple',
-    error: 'Ошибка!'
+    error: 'Ошибка!',
 };

@@ -36,6 +36,18 @@
         &::placeholder {
             color: variables.$INPUT_PLACEHOLDER !important;
         }
+
+        &_error {
+            border-color: variables.$SELECT_ERROR_BORDER !important;
+
+            &:hover {
+                border-color: variables.$SELECT_ERROR_BORDER !important;
+            }
+        
+            &-focused {
+                border-color: variables.$SELECT_ERROR_BORDER !important;
+            }
+        }
     }
 
     .ant-select-focused {

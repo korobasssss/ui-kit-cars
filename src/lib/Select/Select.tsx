@@ -1,6 +1,8 @@
 import { Select } from "antd"
 import './styles.scss'
 import { Message } from "../Message"
+import cx from 'classnames'
+import { useMemo } from "react"
 
 export interface ISelectOptions<V extends string | number, K extends string> {
     value: V
@@ -33,6 +35,16 @@ export const MySelect = <T extends string | number, K extends string>({
     error,
     errorTextShow = false,
 }: ISelect<T, K>): JSX.Element => {
+
+    const stylesSelect = useMemo(() => {
+        return cx(
+            'SSelect',
+            {
+                'ant-select-selector_error': error
+            }
+        )
+    }, [error])
+
     return (
         <div>
             <Select
@@ -43,7 +55,7 @@ export const MySelect = <T extends string | number, K extends string>({
                 disabled={disabled}
                 allowClear={allowClear}
                 showSearch={showSearch}
-                className={'SSelect'}
+                className={stylesSelect}
                 notFoundContent={'Нет подходящих опций'}
             >
                 {options?.map((option) => {
