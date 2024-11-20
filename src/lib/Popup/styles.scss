@@ -3,6 +3,7 @@
 
 .ant-modal-title {
     text-align: center;
+    padding-right: 5px;
 
     font-size: 20px !important;
     @include mixins.font-montserrat-m-bold;
