@@ -13,6 +13,18 @@
 .SIndicator {
   animation: spin 1s linear infinite;
 
-  width: 50px !important;
-  height: 50px !important;
+  &_xs {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  &_s {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  &_m {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
