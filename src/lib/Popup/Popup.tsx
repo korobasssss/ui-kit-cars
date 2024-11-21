@@ -7,7 +7,7 @@ export interface IPopup {
     children: ReactNode
     isModalOpen: boolean
     handleClose: React.Dispatch<SetStateAction<boolean>>
-    isForceRender?: boolean
+    destroyOnClose?: boolean
 }
 
 export const Popup: FC<IPopup> = (
@@ -16,7 +16,7 @@ export const Popup: FC<IPopup> = (
     isModalOpen,
     children,
     handleClose,
-    isForceRender = false
+    destroyOnClose = false
 }
 ) => {
     return (
@@ -27,7 +27,7 @@ export const Popup: FC<IPopup> = (
             footer={null}
             zIndex={10}
             width={679}
-            forceRender={isForceRender}
+            destroyOnClose={destroyOnClose}
         >
             {children}
         </Modal>
