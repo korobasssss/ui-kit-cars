@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from "react"
+import { ButtonHTMLAttributes, FC, ReactNode, useMemo } from "react"
 import cx from 'classnames'
 import styles from './styles.module.scss'
 import { LoaderSpin } from "../LoaderSpin"
@@ -22,13 +22,16 @@ export const MyButton: FC<IButton> = (
         isLoading
     }
 ) => {
+
+    const stylesButton = useMemo(() => cx(
+        classNames,
+        styles.SButton,
+        styles[`SButton_${theme}`]
+    ), [theme])
+    
     return (
         <button
-            className={cx(
-                classNames,
-                styles.SButton,
-                styles[`SButton_${theme}`]
-            )}
+            className={stylesButton}
             type={type}
             onClick={onClick}
             disabled={disabled}

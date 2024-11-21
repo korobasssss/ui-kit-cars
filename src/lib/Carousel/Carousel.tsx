@@ -19,7 +19,11 @@ export const MyCarousel: FC<IMyCarousel> = (
             >
                 {images.map((image, index) => (
                     <div key={index}>
-                        <img src={image} alt={`Slide ${index + 1}`} style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
+                        <img 
+                            src={image}
+                            alt={`Slide ${index + 1}`} 
+                            style={{ width: '100%', height: '400px', objectFit: 'cover' }} 
+                        />
                     </div>
                 ))}
             </Carousel>

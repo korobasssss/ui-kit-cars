@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes } from "react"
+import { FC, InputHTMLAttributes, useMemo } from "react"
 import cx from 'classnames'
 import styles from './styles.module.scss'
 import { Message } from "../Message"
@@ -21,17 +21,19 @@ export const Input: FC<IInput> = ({
     ...restProps
 }) => {
 
+    const stylesInput = useMemo(() => cx(
+        classNames,
+        styles.SInput,
+        {
+            [styles['SInput_error']] : error
+        }
+    ), [error])
+
     return (
         <div className={styles.SInputWrapper}>
             <input
                 value={value}
-                className={cx(
-                    classNames,
-                    styles.SInput,
-                    {
-                        [styles['SInput_error']] : error
-                    }
-                )}
+                className={stylesInput}
                 placeholder={placeholder}
                 onChange={onChange}
                 type={type}

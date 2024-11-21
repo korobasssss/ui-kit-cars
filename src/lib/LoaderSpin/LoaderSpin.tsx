@@ -24,7 +24,8 @@ export const LoaderSpin: FC<ILoaderSpin> = (
             <img 
                 src={LoaderIcon} 
                 alt="Loading..." 
-                className={stylesIndicator} />
+                className={stylesIndicator}
+            />
         )
     }, []);
 
